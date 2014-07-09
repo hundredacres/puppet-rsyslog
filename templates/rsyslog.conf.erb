@@ -26,6 +26,9 @@ $DirCreateMode <%= scope.lookupvar('rsyslog::perm_dir') %>
 $PrivDropToUser <%= scope.lookupvar('rsyslog::run_user') %>
 $PrivDropToGroup <%= scope.lookupvar('rsyslog::run_group') %>
 
+$SystemLogRateLimitInterval 0
+$SystemLogRateLimitBurst 0
+
 #
 # Include all config files in <%= scope.lookupvar('rsyslog::rsyslog_d') %>
 #
